@@ -24,53 +24,17 @@ class PrivacyAndSaftyPage extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         children: const <Widget>[
           HeaderWidget('Tweets'),
-          SettingRowWidget(
-            "Protect your tweet",
-            subtitle:
-                'Only current followers and people you approve in future will be able to see your tweets.',
-            vPadding: 15,
-            showDivider: false,
-            visibleSwitch: true,
-          ),
-          SettingRowWidget(
-            "Photo tagging",
-            subtitle: 'Anyone can tag you',
-          ),
-          HeaderWidget(
-            'Direct Message',
-            secondHeader: true,
-          ),
-          SettingRowWidget(
-            'Direct Message',
-            navigateTo: 'DirectMessagesPage',
-          ),
           HeaderWidget(
             'Live Video',
             secondHeader: true,
           ),
           SettingRowWidget(
-            "Connect to Periscope",
+            "Go Live",
             subtitle:
-                'If selected, you can go live and comment on Periscope broadcasts, and people will be able to see when you\'re watching. if this setting is off, people won\'t be able comment or broadcast live.',
+                'If selected, you can go live , and people will be able to see and comment you on live.',
             vPadding: 15,
             showDivider: false,
             visibleSwitch: true,
-          ),
-          HeaderWidget(
-            'Discoverability and contacts',
-            secondHeader: true,
-          ),
-          SettingRowWidget(
-            "Discoverability and contacts",
-            vPadding: 15,
-            showDivider: false,
-          ),
-          SettingRowWidget(
-            null,
-            subtitle:
-                'Learn more about how this data is used to connect you with people',
-            vPadding: 15,
-            showDivider: false,
           ),
           HeaderWidget(
             'Safety',
@@ -78,12 +42,6 @@ class PrivacyAndSaftyPage extends StatelessWidget {
           ),
           SettingRowWidget(
             "Display media that may contain sensitive content",
-            vPadding: 15,
-            showDivider: false,
-            visibleSwitch: true,
-          ),
-          SettingRowWidget(
-            "Mark media you tweet as containing material thta may be sensitive",
             vPadding: 15,
             showDivider: false,
             visibleSwitch: true,
@@ -107,20 +65,7 @@ class PrivacyAndSaftyPage extends StatelessWidget {
           SettingRowWidget(
             "Precise location",
             subtitle:
-                'Disabled \n\n\nIf enabled, Fwitter will collect, store, and use your device\'s precise location, such as your GPS information. This lets Fwitter improve your experience - for rxample, showing you mpre local content, ads, and recommendations.',
-          ),
-          HeaderWidget(
-            'Personalisation and data',
-            secondHeader: true,
-          ),
-          SettingRowWidget(
-            "Personalisation and data",
-            subtitle: "Allow all",
-          ),
-          SettingRowWidget(
-            "See your Fwitter data",
-            subtitle:
-                "Review and edit your profile information and data associated with your account.",
+                'Disabled \n\n\nIf enabled, CineGeek will collect, store, and use your device\'s precise location, such as your GPS information. This lets CineGeek improve your experience - for rxample, showing you more local content, ads, and recommendations.',
           ),
         ],
       ),

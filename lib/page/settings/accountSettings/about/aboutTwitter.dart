@@ -17,7 +17,7 @@ class AboutPage extends StatelessWidget {
       appBar: CustomAppBar(
         isBackButton: true,
         title: customTitleText(
-          'About Fwitter',
+          'About CineGeek',
         ),
       ),
       body: ListView(
@@ -55,7 +55,7 @@ class AboutPage extends StatelessWidget {
             onPressed: () async {
               showLicensePage(
                 context: context,
-                applicationName: 'Fwitter',
+                applicationName: 'CineGeek',
                 applicationVersion: '1.0.0',
                 useRootNavigator: true,
               );

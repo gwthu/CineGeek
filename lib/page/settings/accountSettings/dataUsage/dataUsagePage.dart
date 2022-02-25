@@ -125,7 +125,7 @@ class DataUsagePage extends StatelessWidget {
             vPadding: 15,
             showDivider: false,
             subtitle:
-                'When enabled, video won\'t autoplay and lower-quality images load. This automatically reduces your data usage for all Fwitter accounts on this device.',
+                'When enabled, video won\'t autoplay and lower-quality images load. This automatically reduces your data usage for all CineGeek accounts on this device.',
           ),
           const Divider(height: 0),
           const HeaderWidget('Images'),
@@ -176,7 +176,7 @@ class DataUsagePage extends StatelessWidget {
           const SettingRowWidget(
             null,
             subtitle:
-                'Allow Fwitter to sync data in the background to enhance your experience.',
+                'Allow CineGeek to sync data in the background to enhance your experience.',
             vPadding: 10,
           ),
         ],

@@ -36,6 +36,7 @@ class AppIcon {
   static const int arrowDown = 0xf196;
   static const int blueTick = 0xf099;
 
+
   static const int link = 0xf098;
   static const int unFollow = 0xf097;
   static const int mute = 0xf101;

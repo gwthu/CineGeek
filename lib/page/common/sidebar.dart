@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:provider/provider.dart';
 
 import '../../helper/constant.dart';
@@ -7,6 +8,7 @@ import '../../state/authState.dart';
 import '../../state/notificationState.dart';
 import '../../widgets/customWidgets.dart';
 import '../../widgets/newWidget/customUrlText.dart';
+import 'widget/topRatedPage.dart';
 
 class SidebarMenu extends StatefulWidget {
   const SidebarMenu({Key? key, this.scaffoldKey}) : super(key: key);
@@ -166,6 +168,33 @@ class _SidebarMenuState extends State<SidebarMenu> {
     );
   }
 
+  ListTile _menuListRow_Button(String title,
+      {Function? onPressed, IconData? icon, bool isEnable = false}) {
+    return ListTile(
+      onTap: () {
+        if (onPressed != null) {
+          onPressed();
+        }
+      },
+      leading: icon == null
+          ? null
+          : Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: Icon(
+                icon,
+                color: isEnable ? AppColor.darkGrey : AppColor.lightGrey,
+              ),
+            ),
+      title: customText(
+        title,
+        style: TextStyle(
+          fontSize: 20,
+          color: isEnable ? AppColor.secondary : AppColor.lightGrey,
+        ),
+      ),
+    );
+  }
+
   Positioned _footer() {
     return Positioned(
       bottom: 0,
@@ -234,10 +263,12 @@ class _SidebarMenuState extends State<SidebarMenu> {
                       icon: AppIcon.profile, isEnable: true, onPressed: () {
                     _navigateTo('ProfilePage');
                   }),
-                  _menuListRowButton('Lists', icon: AppIcon.lists),
-                  _menuListRowButton('Bookmark', icon: AppIcon.bookmark),
-                  _menuListRowButton('Moments', icon: AppIcon.moments),
-                  _menuListRowButton('Fwitter ads', icon: AppIcon.twitterAds),
+                  _menuListRow_Button('Top Rated',
+                      icon: FontAwesome.star, isEnable: true, onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => TopRatedPage()));
+                  }),
+                  _menuListRow_Button('Booking', icon: FontAwesome.ticket),
                   const Divider(),
                   _menuListRowButton('Settings and privacy', isEnable: true,
                       onPressed: () {

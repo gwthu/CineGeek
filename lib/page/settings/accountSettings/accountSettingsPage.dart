@@ -30,23 +30,15 @@ class AccountSettingsPage extends StatelessWidget {
           ),
           const Divider(height: 0),
           SettingRowWidget(
-            "Phone",
-            subtitle: user.contact,
-          ),
-          SettingRowWidget(
             "Email address",
             subtitle: user.email,
             navigateTo: 'VerifyEmailPage',
           ),
-          const SettingRowWidget("Password"),
-          const SettingRowWidget("Security"),
           const HeaderWidget(
             'Data and Permission',
             secondHeader: true,
           ),
           const SettingRowWidget("Country"),
-          const SettingRowWidget("Your Fwitter data"),
-          const SettingRowWidget("Apps and sessions"),
           SettingRowWidget(
             "Log out",
             textColor: TwitterColor.ceriseRed,
