@@ -329,8 +329,8 @@ class _ProfilePageState extends State<ProfilePage>
                         indicator: TabIndicator(),
                         controller: _tabController,
                         tabs: <Widget>[
-                          const Text("Tweets"),
-                          const Text("Tweets & replies"),
+                          const Text("Pots"),
+                          const Text("Posts & replies"),
                           const Text("Media")
                         ],
                       ),
@@ -395,21 +395,21 @@ class _ProfilePageState extends State<ProfilePage>
             ),
           )
 
-        /// if tweet list is empty or null then need to show user a message
+        /// if post list is empty or null then need to show user a message
         : list == null || list.length < 1
             ? Container(
                 padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
                 child: NotifyText(
                   title: isMyProfile
-                      ? 'You haven\'t ${isreply ? 'reply to any Tweet' : isMedia ? 'post any media Tweet yet' : 'post any Tweet yet'}'
-                      : '${authstate.profileUserModel!.userName} hasn\'t ${isreply ? 'reply to any Tweet' : isMedia ? 'post any media Tweet yet' : 'post any Tweet yet'}',
+                      ? 'You haven\'t ${isreply ? 'reply to any Post' : isMedia ? 'post any media  yet' : 'post any Posts yet'}'
+                      : '${authstate.profileUserModel!.userName} hasn\'t ${isreply ? 'reply to any Post' : isMedia ? 'post any media yet' : 'post any Posts yet'}',
                   subTitle: isMyProfile
-                      ? 'Tap tweet button to add new'
+                      ? 'Tap Post button to add new'
                       : 'Once he\'ll do, they will be shown up here',
                 ),
               )
 
-            /// If tweets available then tweet list will displayed
+            /// If posts available then post list will displayed
             : ListView.builder(
                 padding: const EdgeInsets.symmetric(vertical: 0),
                 itemCount: list.length,
@@ -585,11 +585,11 @@ class Choice {
 }
 
 const List<Choice> choices = <Choice>[
-  Choice(title: 'Share', icon: Icons.directions_car),
+  Choice(title: 'View Bookings', icon: Icons.directions_car),
   Choice(title: 'Draft', icon: Icons.directions_bike),
-  Choice(title: 'View Lists', icon: Icons.directions_boat),
-  Choice(title: 'View Moments', icon: Icons.directions_bus),
-  Choice(title: 'QR code', icon: Icons.directions_railway),
+  // Choice(title: 'View Lists', icon: Icons.directions_boat),
+  Choice(title: 'Go Live', icon: Icons.directions_bus),
+  Choice(title: 'Settings', icon: Icons.directions_railway),
 ];
 
 class ChoiceCard extends StatelessWidget {

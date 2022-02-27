@@ -23,7 +23,6 @@ class PrivacyAndSaftyPage extends StatelessWidget {
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: const <Widget>[
-          HeaderWidget('Tweets'),
           HeaderWidget(
             'Live Video',
             secondHeader: true,

@@ -40,7 +40,7 @@ class FeedPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: _floatingActionButton(context),
-      backgroundColor: TwitterColor.mystic,
+      backgroundColor: Color.fromARGB(224, 32, 182, 174),
       body: SafeArea(
         child: Container(
           height: fullHeight(context),
@@ -110,9 +110,9 @@ class _FeedPageBody extends StatelessWidget {
                 : !state.isBusy && list == null
                     ? SliverToBoxAdapter(
                         child: EmptyList(
-                          'No Tweet added yet',
+                          'No Post added yet',
                           subTitle:
-                              'When new Tweet added, they\'ll show up here \n Tap tweet button to add new',
+                              'When new Post added, they\'ll show up here \n Tap Post button to add new',
                         ),
                       )
                     : SliverList(

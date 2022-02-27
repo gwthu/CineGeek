@@ -121,7 +121,7 @@ class _SignupState extends State<Signup> {
       width: MediaQuery.of(context).size.width,
       child: FlatButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-        color: TwitterColor.dodgetBlue,
+        color: Color.fromARGB(255, 70, 180, 166),
         onPressed: _submitForm,
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         child: const Text('Sign up', style: TextStyle(color: Colors.white)),

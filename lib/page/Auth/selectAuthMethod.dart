@@ -23,7 +23,7 @@ class _WelcomePageState extends State<WelcomePage> {
       width: MediaQuery.of(context).size.width,
       child: FlatButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-        color: TwitterColor.dodgetBlue,
+        color: Color.fromARGB(255, 70, 180, 166),
         onPressed: () {
           var state = Provider.of<AuthState>(context, listen: false);
           Navigator.push(
@@ -48,14 +48,14 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Container(
-              width: MediaQuery.of(context).size.width - 80,
-              height: 40,
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 70,
+              height: 180,
               child: Image.asset('assets/images/icon-480.png'),
             ),
             const Spacer(),
             const TitleText(
-              'See what\'s happening in the world right now.',
+              '       Welcome to the               \n           Cine world ',
               fontSize: 25,
             ),
             const SizedBox(
@@ -88,7 +88,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     child: TitleText(
                       ' Log in',
                       fontSize: 14,
-                      color: TwitterColor.dodgetBlue,
+                      color: Color.fromARGB(255, 70, 180, 166),
                       fontWeight: FontWeight.w300,
                     ),
                   ),

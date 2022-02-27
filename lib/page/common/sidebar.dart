@@ -48,7 +48,8 @@ class _SidebarMenuState extends State<SidebarMenu> {
               width: 56,
               margin: const EdgeInsets.only(left: 17, top: 10),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 2),
+                border: Border.all(
+                    color: Color.fromARGB(255, 91, 219, 192), width: 2),
                 borderRadius: BorderRadius.circular(28),
                 image: DecorationImage(
                   image: customAdvanceNetworkImage(
@@ -263,11 +264,8 @@ class _SidebarMenuState extends State<SidebarMenu> {
                       icon: AppIcon.profile, isEnable: true, onPressed: () {
                     _navigateTo('ProfilePage');
                   }),
-                  _menuListRow_Button('Top Rated',
-                      icon: FontAwesome.star, isEnable: true, onPressed: () {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => TopRatedPage()));
-                  }),
+                  _menuListRow_Button('Top Rated', icon: FontAwesome.star),
+                  const Divider(),
                   _menuListRow_Button('Booking', icon: FontAwesome.ticket),
                   const Divider(),
                   _menuListRowButton('Settings and privacy', isEnable: true,

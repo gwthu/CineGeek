@@ -111,7 +111,8 @@ class _SignInState extends State<SignIn> {
       child: Text(
         title,
         style: const TextStyle(
-            color: TwitterColor.dodgetBlue, fontWeight: FontWeight.bold),
+            color: Color.fromARGB(255, 70, 180, 166),
+            fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -122,7 +123,7 @@ class _SignInState extends State<SignIn> {
       margin: const EdgeInsets.symmetric(vertical: 35),
       child: FlatButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-        color: TwitterColor.dodgetBlue,
+        color: Color.fromARGB(255, 70, 180, 166),
         onPressed: _emailLogin,
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         child: const TitleText('Submit', color: Colors.white),

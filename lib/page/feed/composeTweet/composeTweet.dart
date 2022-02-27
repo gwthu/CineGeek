@@ -199,9 +199,9 @@ class _ComposeTweetReplyPageState extends State<ComposeTweetPage> {
         onActionPressed: _submitButton,
         isCrossButton: true,
         submitButtonText: widget.isTweet
-            ? 'Tweet'
+            ? 'Post'
             : widget.isRetweet!
-                ? 'Retweet'
+                ? 'Repost'
                 : 'Reply',
         isSubmitDisable:
             !Provider.of<ComposeTweetState>(context).enableSubmitButton ||
@@ -550,7 +550,7 @@ class _TextField extends StatelessWidget {
           decoration: InputDecoration(
               border: InputBorder.none,
               hintText: isTweet
-                  ? 'What\'s happening?'
+                  ? 'Add movie title in hashtag \nbefore posting'
                   : isRetweet
                       ? 'Add a comment'
                       : 'Tweet your reply',

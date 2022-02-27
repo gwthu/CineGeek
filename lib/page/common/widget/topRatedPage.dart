@@ -2,8 +2,11 @@ import 'package:cinegeek/helper/theme.dart';
 import 'package:cinegeek/widgets/customAppBar.dart';
 import 'package:flutter/material.dart';
 
+import '../../../widgets/customWidgets.dart';
 import '../../feed/feedPage.dart';
+import '../../feed/feedPostDetail.dart';
 import '../../homePage.dart';
+import '../sidebar.dart';
 
 class TopRatedPage extends StatefulWidget {
   const TopRatedPage({Key? key}) : super(key: key);
@@ -17,17 +20,16 @@ class _TopRatedPageState extends State<TopRatedPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: TwitterColor.mystic,
-      appBar: CustomAppBar(
+      appBar: AppBar(
         leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: const Icon(Icons.arrow_back)),
-        title: const Text(
-          "Top Rated",
-          style: TextStyle(color: Colors.blue),
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
         ),
-        isBackButton: true,
+        title: customTitleText(
+          'Top Rated',
+        ),
       ),
       body: Column(
         children: [
