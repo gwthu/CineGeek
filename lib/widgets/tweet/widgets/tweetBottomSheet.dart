@@ -77,7 +77,7 @@ class TweetBottomSheet {
         _widgetBottomSheetRow(
           context,
           AppIcon.link,
-          text: 'Copy link to tweet',
+          text: 'Copy link to post',
         ),
         isMyTweet
             ? _widgetBottomSheetRow(
@@ -94,7 +94,7 @@ class TweetBottomSheet {
             ? _widgetBottomSheetRow(
                 context,
                 AppIcon.delete,
-                text: 'Delete Tweet',
+                text: 'Delete Post',
                 onPressed: () {
                   _deleteTweet(
                     context,
@@ -135,7 +135,7 @@ class TweetBottomSheet {
             : _widgetBottomSheetRow(
                 context,
                 AppIcon.report,
-                text: 'Report Tweet',
+                text: 'Report Post',
               ),
       ],
     );
@@ -158,7 +158,7 @@ class TweetBottomSheet {
         _widgetBottomSheetRow(
           context,
           AppIcon.link,
-          text: 'Copy link to tweet',
+          text: 'Copy link to post',
         ),
         isMyTweet
             ? _widgetBottomSheetRow(
@@ -175,7 +175,7 @@ class TweetBottomSheet {
             ? _widgetBottomSheetRow(
                 context,
                 AppIcon.delete,
-                text: 'Delete Tweet',
+                text: 'Delete post',
                 onPressed: () {
                   _deleteTweet(
                     context,
@@ -213,7 +213,7 @@ class TweetBottomSheet {
             : _widgetBottomSheetRow(
                 context,
                 AppIcon.report,
-                text: 'Report Tweet',
+                text: 'Report Post',
               ),
       ],
     );
@@ -313,13 +313,8 @@ class TweetBottomSheet {
         ),
         _widgetBottomSheetRow(
           context,
-          AppIcon.retweet,
-          text: 'Retweet',
-        ),
-        _widgetBottomSheetRow(
-          context,
           AppIcon.edit,
-          text: 'Retweet with comment',
+          text: 'Repost',
           isEnable: true,
           onPressed: () {
             var state = Provider.of<FeedState>(context, listen: false);

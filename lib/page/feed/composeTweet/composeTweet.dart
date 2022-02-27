@@ -553,7 +553,7 @@ class _TextField extends StatelessWidget {
                   ? 'Add movie title in hashtag \nbefore posting'
                   : isRetweet
                       ? 'Add a comment'
-                      : 'Tweet your reply',
+                      : 'Post your reply',
               hintStyle: const TextStyle(fontSize: 18)),
         ),
       ],

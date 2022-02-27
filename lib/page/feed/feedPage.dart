@@ -40,7 +40,7 @@ class FeedPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: _floatingActionButton(context),
-      backgroundColor: Color.fromARGB(224, 32, 182, 174),
+      backgroundColor: Color.fromARGB(223, 255, 255, 255),
       body: SafeArea(
         child: Container(
           height: fullHeight(context),
